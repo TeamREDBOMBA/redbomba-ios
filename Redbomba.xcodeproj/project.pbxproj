@@ -13,6 +13,8 @@
 		58338A4219E6AA30004B4103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58338A4119E6AA30004B4103 /* Images.xcassets */; };
 		58338A4519E6AA30004B4103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58338A4319E6AA30004B4103 /* LaunchScreen.xib */; };
 		58338A5119E6AA30004B4103 /* RedbombaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58338A5019E6AA30004B4103 /* RedbombaTests.swift */; };
+		587126C81A133C1900FC2CCD /* loading_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 587126C61A133C1900FC2CCD /* loading_icon.png */; };
+		587126C91A133C1900FC2CCD /* login_top_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 587126C71A133C1900FC2CCD /* login_top_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		58338A4A19E6AA30004B4103 /* RedbombaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedbombaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58338A4F19E6AA30004B4103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58338A5019E6AA30004B4103 /* RedbombaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedbombaTests.swift; sourceTree = "<group>"; };
+		587126C61A133C1900FC2CCD /* loading_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_icon.png; path = img/loading_icon.png; sourceTree = SOURCE_ROOT; };
+		587126C71A133C1900FC2CCD /* login_top_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_top_logo.png; path = img/login_top_logo.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		58338A3819E6AA30004B4103 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				587126C61A133C1900FC2CCD /* loading_icon.png */,
+				587126C71A133C1900FC2CCD /* login_top_logo.png */,
 				58338A3919E6AA30004B4103 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,6 +203,8 @@
 				58338A4019E6AA30004B4103 /* Main.storyboard in Resources */,
 				58338A4519E6AA30004B4103 /* LaunchScreen.xib in Resources */,
 				58338A4219E6AA30004B4103 /* Images.xcassets in Resources */,
+				587126C91A133C1900FC2CCD /* login_top_logo.png in Resources */,
+				587126C81A133C1900FC2CCD /* loading_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
