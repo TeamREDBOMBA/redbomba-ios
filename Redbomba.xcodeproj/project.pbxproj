@@ -21,6 +21,8 @@
 		58BAEF201A14716E00FB695E /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF1F1A14716E00FB695E /* MainController.swift */; };
 		58BAEF251A147BBA00FB695E /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF231A147BBA00FB695E /* Locksmith.swift */; };
 		58BAEF261A147BBA00FB695E /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF241A147BBA00FB695E /* LocksmithRequest.swift */; };
+		58BAEF281A148F2C00FB695E /* MainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF271A148F2C00FB695E /* MainTableCell.swift */; };
+		58BAEF2A1A14AA0200FB695E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BAEF291A14AA0200FB695E /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		58BAEF1F1A14716E00FB695E /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = ../MainController.swift; sourceTree = "<group>"; };
 		58BAEF231A147BBA00FB695E /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
 		58BAEF241A147BBA00FB695E /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
+		58BAEF271A148F2C00FB695E /* MainTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableCell.swift; sourceTree = "<group>"; };
+		58BAEF291A14AA0200FB695E /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,17 +98,19 @@
 		58338A3719E6AA30004B4103 /* Redbomba */ = {
 			isa = PBXGroup;
 			children = (
+				587126CC1A137DBE00FC2CCD /* SwiftyJSON.h */,
+				58338A3A19E6AA30004B4103 /* AppDelegate.swift */,
+				58BAEF291A14AA0200FB695E /* DetailController.swift */,
 				58BAEF231A147BBA00FB695E /* Locksmith.swift */,
 				58BAEF241A147BBA00FB695E /* LocksmithRequest.swift */,
-				58BAEF1F1A14716E00FB695E /* MainController.swift */,
-				587126CC1A137DBE00FC2CCD /* SwiftyJSON.h */,
-				587126CD1A137DBE00FC2CCD /* SwiftyJSON.swift */,
-				58338A3A19E6AA30004B4103 /* AppDelegate.swift */,
 				58338A3C19E6AA30004B4103 /* LoginController.swift */,
-				58338A3E19E6AA30004B4103 /* Main.storyboard */,
+				58BAEF1F1A14716E00FB695E /* MainController.swift */,
+				58BAEF271A148F2C00FB695E /* MainTableCell.swift */,
 				587126CA1A134B7600FC2CCD /* Settings.swift */,
+				587126CD1A137DBE00FC2CCD /* SwiftyJSON.swift */,
 				58338A4119E6AA30004B4103 /* Images.xcassets */,
 				58338A4319E6AA30004B4103 /* LaunchScreen.xib */,
+				58338A3E19E6AA30004B4103 /* Main.storyboard */,
 				58338A3819E6AA30004B4103 /* Supporting Files */,
 			);
 			path = Redbomba;
@@ -245,10 +251,12 @@
 			files = (
 				58BAEF261A147BBA00FB695E /* LocksmithRequest.swift in Sources */,
 				58BAEF251A147BBA00FB695E /* Locksmith.swift in Sources */,
+				58BAEF281A148F2C00FB695E /* MainTableCell.swift in Sources */,
 				58338A3D19E6AA30004B4103 /* LoginController.swift in Sources */,
 				587126CB1A134B7600FC2CCD /* Settings.swift in Sources */,
 				58338A3B19E6AA30004B4103 /* AppDelegate.swift in Sources */,
 				58BAEF201A14716E00FB695E /* MainController.swift in Sources */,
+				58BAEF2A1A14AA0200FB695E /* DetailController.swift in Sources */,
 				587126CE1A137DBE00FC2CCD /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +382,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Redbomba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +392,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Redbomba/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,18 +12,30 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPasswd: UITextField!
+    @IBOutlet weak var viewLogin: UIView!
+    @IBOutlet weak var bottomSize: NSLayoutConstraint!
     
     lazy var data = NSMutableData()
+    var uid:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let uid:String = UserDefault.load("uid")
-        
-        if uid != ""{
-            var timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("tryLogin"), userInfo: nil, repeats: false)
+        tfEmail.attributedPlaceholder = NSAttributedString(string:"이메일", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        tfPasswd.attributedPlaceholder = NSAttributedString(string:"비밀번호", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        self.uid = UserDefault.load("uid")
+        if self.uid != ""{
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.0, target: self, selector: Selector("tryLogin"), userInfo: nil, repeats: false)
+        }else{
+            tfEmail.text = ""
+            tfPasswd.text = ""
+            viewLogin.hidden = false
         }
-        
     }
     
     @IBAction func tryLogin(sender: AnyObject) {
@@ -60,5 +72,21 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        var keyboardSize = (sender.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().height
+        
+        var keyboardH = keyboardSize!
+        
+        bottomSize.constant = keyboardH/2
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        bottomSize.constant = 0
     }
 }
