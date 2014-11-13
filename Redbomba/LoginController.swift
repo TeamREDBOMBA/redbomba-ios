@@ -45,7 +45,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
         if strEmail.isEmpty {
             UIcontents.showAlert("잘못된 이메일입니다.",strMsg: "이메일을 확인해주세요.")
         }else if strPasswd.isEmpty {
-            UIcontents.showAlert("잘못된 패스워드입니다.",strMsg:"패스워드를 확인해주세요.")
+            UIcontents.showAlert("잘못된 비밀번호입니다.",strMsg:"비밀번호를 확인해주세요.")
         }else{
             var jsp = JSONParser(query: "mode=getLoginSession&email="+strEmail+"&password="+strPasswd)
             var userName = jsp.jsonData[0]["uid"]
@@ -55,7 +55,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
                 var mainController:MainController = self.storyboard!.instantiateViewControllerWithIdentifier("MainController") as MainController
                 self.presentViewController(mainController, animated: true, completion: nil)
             }else{
-                UIcontents.showAlert("Fail",strMsg:"")
+                UIcontents.showAlert("로그인 실패",strMsg:"이메일 및 비밀번호를 확인해주세요.")
             }
         }
     }
@@ -83,7 +83,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
         
         var keyboardH = keyboardSize!
         
-        bottomSize.constant = keyboardH/2
+        bottomSize.constant = keyboardH/3
     }
     
     func keyboardWillHide(sender: NSNotification) {
