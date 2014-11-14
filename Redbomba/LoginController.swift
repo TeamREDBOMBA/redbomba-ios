@@ -83,7 +83,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate {
         
         var keyboardH = keyboardSize!
         
-        bottomSize.constant = keyboardH/3
+        bottomSize.constant = keyboardH/2
     }
     
     func keyboardWillHide(sender: NSNotification) {
